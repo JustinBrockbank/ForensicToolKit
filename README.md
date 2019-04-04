@@ -58,7 +58,8 @@ Use Instructions:
 >-	Navigate to the menu Scan and click Custom Scan. 
 >-	Enter suspect system’s IP address. 
 >-	Click OK. 
-(Textbook Page 178)
+
+(Digital Forensics and Incident Response - Page 178)
 
 **Download:**
 >-	https://www.f-response.com/buyfresponse/software
@@ -73,33 +74,40 @@ Snort has a lot of different tools that can be used, such as: a sniffer mode, pa
 
 Use Instructions for Windows (From Class Instruction):
 >-	Step 1. 
-o	Download WinPcap installer: http://www.winpcap.org
+>>-	Download WinPcap installer: http://www.winpcap.org
 >-	Step 2.
-o	Install WinPcap 
+>>-	Install WinPcap 
 >-	Step 3. 
-o	Download the Snort installer.exe: http://www.snort.org
+>>-	Download the Snort installer.exe: http://www.snort.org
 >-	Step 4.
-o	Install Snort
+>>-	Install Snort
 >-	Step 5.
-o	Register an account with Snort
+>>-	Register an account with Snort
 >-	Step 6.
-o	Download the Snort rules that match your version (e.g., snortrules-snapshot-xxxxx.tar.gz).
+>>-	Download the Snort rules that match your version (e.g., snortrules-snapshot-xxxxx.tar.gz).
 >-	Step 7.
-o	Decompress the Snort rules (see 7-zip)
+>>-	Decompress the Snort rules (see 7-zip)
 >-	Step 8.
-o	Move the rules and preproc_rules folders into your Snort installation folder.
+>>-	Move the rules and preproc_rules folders into your Snort installation folder.
 >-	Step 9. 
-o	Open the config file: c:\Snort\etc\snort.conf and make the following changes: 
-	 
+>>-	Open the config file: c:\Snort\etc\snort.conf and make the following changes: 
+```
+var RULE_PATH c:\Snort\rules
+var PREPROC_RULE_PATH c:\Snort\preproc_rules
+var WHITE_LIST_PATH c:\Snort\rules
+var BLACK_LIST_PATH c:\Snort\rules
+config logdir: c:\Snort\log
+dynamicpreprocessor directory c:\Snort\lib\snort_dynamicpreprocessor
+dynamicengine c:\Snort\lib\snort_dynamicengine\sf_engine.dll
+```
 >-	Step 10.
-o	In the rules folder create a white_list.rules file and a black_list.rules file. They can both be empty.
+>>-	In the rules folder create a white_list.rules file and a black_list.rules file. They can both be empty.
 >-	Step 11. 
-o	Run Snort
-	snort -r <pcap file> -c <config file>
-•	*this may not run on pcap-ng files
+>>-	Run Snort
+>>>-snort -r <pcap file> -c <config file>	*this may not run on pcap-ng files
 >-	Step 12. 
-o	See alerts
-	Check the Snort/log file for alert.ids
+>>-	See alerts
+>>>-	Check the Snort/log file for alert.ids
 
 **Download:**
 >-	https://www.snort.org
