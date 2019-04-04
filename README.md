@@ -99,6 +99,7 @@ var BLACK_LIST_PATH c:\Snort\rules
 config logdir: c:\Snort\log
 dynamicpreprocessor directory c:\Snort\lib\snort_dynamicpreprocessor
 dynamicengine c:\Snort\lib\snort_dynamicengine\sf_engine.dll
+#dynamicdetection directory ....
 ```
 >-	Step 10.
 >>-	In the rules folder create a white_list.rules file and a black_list.rules file. They can both be empty.
