@@ -123,15 +123,15 @@ Volatility is a great tool to acquire artifacts from volatile memory. This can p
 
 Use Instructions:
 >-	Download Volatility
->>o	sudo apt-get install volatility
+>>-	sudo apt-get install volatility
 >-	Navigate to directory where Volatility.exe is located
 >-	Using suspect memory, find out what profile to use for memory using the following command:
->>o	volatility-2.6.standalone.exe imageinfo -f memdump3.raw
+>>-	volatility-2.6.standalone.exe imageinfo -f memdump3.raw
 >-	With the profile identified from the previous command, run all subsequent commands using that profile
 >-	Run desired commands:
->>o	volatility-2.6.standalone.exe –profile=Win7SP0x86 pslist -f memdump3.raw
+>>-	volatility-2.6.standalone.exe –profile=Win7SP0x86 pslist -f memdump3.raw
 >-	To find out other commands:
->>o	volatility-2.6.standalone.exe -h
+>>-	volatility-2.6.standalone.exe -h
 
 **Download:** 
 >-	Using apt-get install volatility
