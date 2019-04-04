@@ -32,13 +32,13 @@ This tool can be used to gain access to physical memory on a device. This tool c
 Use Instructions: 
 >-	Uses the output file format of AFF4 (Advanced Forensic Framework 4). 
 >-	To acquire physical memory:
->>o	Open Windows Command Prompt as an administrator
->>o	Type D:\winpmem-2.1.exe -h (help menu)
->o	To configure Winpmem to acquire the memory of system:
-	D:\winpmem-2.1.exe –format raw -o e:\Laptop1
->	This tool can be deployed on remote systems through native applications such as Remote Desktop or PsExec. Once installed on the remote system, the output can be piped to another system using netcat.
->	Command:
->>	C:/winpmem-2.1.exe - | nc 192.168.0.56 4455
+>>-	Open Windows Command Prompt as an administrator
+>>-	Type D:\winpmem-2.1.exe -h (help menu)
+>>-	To configure Winpmem to acquire the memory of system:
+>>>-	D:\winpmem-2.1.exe –format raw -o e:\Laptop1
+>> -	This tool can be deployed on remote systems through native applications such as Remote Desktop or PsExec. Once installed on the remote system, the output can be piped to another system using netcat.
+>>-	Command:
+>>>-	C:/winpmem-2.1.exe - | nc 192.168.0.56 4455
 
 
 **Download:**
